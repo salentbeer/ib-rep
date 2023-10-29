@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Вычисление угла между векторами</title>
+    <link rel="stylesheet" href="./frontend/css/build.css">
+</head>
+
+<body>
+<div class="container">
+    <!-- Вектор A -->
+    <div class="label">Координаты вектора A</div>
+    <input type="text" class="input-field" placeholder="X1" id="ax">
+    <input type="text" class="input-field" placeholder="Y1" id="ay">
+    <input type="text" class="input-field" placeholder="Z1" id="az">
+
+    <!-- Вектор B -->
+    <div class="label">Координаты вектора B</div>
+    <input type="text" class="input-field" placeholder="X2" id="bx">
+    <input type="text" class="input-field" placeholder="Y2" id="by">
+    <input type="text" class="input-field" placeholder="Z2" id="bz">
+
+    <div class="error-message" id="error-message"></div>
+    <div class="btn-convert" id="calculate-angle">Вычислить угол</div>
+
+    <div class="label">Результат (в градусах)</div>
+    <input type="text" class="input-field output-number" readonly id="result">
+</div>
+
+<script src="frontend/js/build.js"></script>
+</body>
+
+</html>
