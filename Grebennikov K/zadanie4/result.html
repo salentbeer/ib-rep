@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Исключение гласных</title>
+  </head>
+  <h1>Операция с текстом</h1>
+  <body>
+    <label for="input-text">Введите текст:</label><br>
+    <textarea id="input-text" rows="15" cols="50"></textarea><br><br>
+
+    <label for="output-text">Результат:</label><br>
+    <textarea id="output-text" rows="15" cols="50"></textarea><br>
+
+    <button onclick="excludeVowels()">Исключить гласные</button>
+
+    <script>
+      function excludeVowels() {
+        const inputText = document.getElementById("input-text").value;
+        const outputText = document.getElementById("output-text");
+        const vowels = ["а","е","ё","и","о","у","ы","ю","я","э","a", "e", "i", "o", "u"];
+
+        let result = "";
+        for (let i = 0; i < inputText.length; i++) {
+          if (!vowels.includes(inputText[i].toLowerCase())) {
+            result += inputText[i];
+          }
+        }
+
+        outputText.value = result;
+      }
+    </script>
+  </body>
+</html> 

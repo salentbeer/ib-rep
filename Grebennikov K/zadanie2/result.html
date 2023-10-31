@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Операции с матрицей</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        
+        .input-cell {
+            width: 40px;
+            text-align: center;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Операции с матрицей</h1>
+    
+    <label for="rows">Количество строк:</label>
+    <input type="number" id="rows">
+    
+    <label for="cols">Количество столбцов:</label>
+    <input type="number" id="cols">
+    
+    <button onclick="createMatrix()">Создать матрицу</button>
+    <button onclick="calculateLowerTriangleSum()">Вычислить сумму нижнего треугольника</button>
+    
+    <h2>Матрица</h2>
+    
+    <table id="matrix">
+    </table>
+    
+    <p id="result"></p>
+    
+    <script>
+        function createMatrix() {
+            var rows = Number(document.getElementById("rows").value);
+            var cols = Number(document.getElementById("cols").value);
+            
+            var matrixTable = document.getElementById("matrix");
+            matrixTable.innerHTML = "";
+            
+            for (var i = 0; i < rows; i++) {
+                var row = matrixTable.insertRow();
+                
+                for (var j = 0; j < cols; j++) {
+                    var cell = row.insertCell();
+                    
+                    var input = document.createElement("input");
+                    input.type = "number";
+                    input.className = "input-cell";
+                    
+                    cell.appendChild(input);
+                }
+            }
+        }
+        
+        function calculateLowerTriangleSum() {
+            var matrixTable = document.getElementById("matrix");
+            var rows = matrixTable.rows;
+
+            var sum = 0;
+
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].cells;
+
+                for (var j = 0; j <= i; j++) {
+                    var cellValue = Number(cells[j].querySelector("input").value);
+                    sum += cellValue;
+                }
+            }
+
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = "Сумма элементов нижнего треугольника матрицы: " + sum;
+        }
+    </script>
+</body>
+</html>
