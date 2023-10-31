@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laba2</title>
+    <link ref="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        Здание №1. Из 6 в 10:</br>
+        <input id="From6To10Input"></br>
+        <button onclick="ConvertFrom6To10();">Перевести</button>
+        <div id="ResultDivFrom6To10">Ответ: </div>
+    </div>
+    </br></br></br></br></br>
+    <div>
+        Задание №2. Найдите произведение двух матриц, используя алгоритм Штрассена.</br>
+        Введите n (P.S. Работет только с матрицей 2 на 2): <input id="nInput" value="2"></br></br>
+        Введите матрицу №1: <input id="Matrix1Input"></br>
+        Введите матрицу №2: <input id="Matrix2Input"></br>
+        <button onclick="ParseMatrix();">Умножить матрицы</button></br>
+        Ответ:
+        <textarea type="text" id="ResultEx2"></textarea>
+    </div>
+    </br></br></br></br></br>
+    <div>
+        Здание №3. Напишите функцию, которая определяет, сколько раз буква 
+        встречается в строке</br>
+        Текст:  <input id="TextEx3Input"></br>
+        Буква: <input id="BukvaInput"></br>
+        <button onclick="SkilhoRazBurvaVTexte();">Подсчитать</button>
+        <div id="ResultDivEx3">Ответ: </div>
+    </div>
+    </br></br></br></br></br>
+    <div>
+        Задание №4. Удаление из текста гласных букв</br>
+        <input id="DeleteGlasBukvInput"></br>
+        <button onclick="DeleteGlasBukv();">Перевести</button>
+        <div id="ResultDivDeleteGlasBukv">Ответ: </div>
+    </div>
+    <script src="Sripts/scriptFor1.js"></script>
+    <script src="Sripts/scriptFor2.js"></script>
+    <script src="Sripts/scriptFor3.js"></script>
+    <script src="Sripts/scriptFor4.js"></script>
+</body>
+
+</html>
